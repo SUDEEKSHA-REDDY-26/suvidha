@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suvidha Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .top-bar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .top-bar-left .text {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .top-bar-left .text i {
+            margin-right: 5px;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            position: fixed; /* Make the header fixed */
+            width: 100%;
+            top: 0;
+            z-index: 999; /* Ensure it stays on top */
+        }
+
+        .navbar-brand img {
+            max-width: 150px;
+        }
+
+        /* Add some margin to compensate for the fixed header */
+        .carousel, .about, .internship, .achievements {
+            margin-top: 90px;
+        }
+
+        .social a {
+            font-size: 1.5rem;
+            margin-left: 15px;
+            color: #fff;
+            float: right;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            background-color: #f8f9fa; /* Light gray background */
+            padding: 50px 0;
+        }
+
+        .about-img img {
+            border-radius: 15px;
+        }
+
+        .about-tab .nav-link {
+            color: #333; /* Default color */
+            font-weight: 600;
+        }
+
+        .about-tab .nav-link.active {
+            background-color: #ffcc00; /* Active tab color */
+            color: #fff; /* Active tab text color */
+        }
+
+        .carousel-btn a {
+            margin: 5px;
+        }
+
+        .carousel-text {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Internship Section */
+        .internship {
+            padding: 50px 0;
+            background-color: #ffffff;
+        }
+
+        .internship img {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        .internship-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .internship-text {
+            padding: 20px;
+        }
+
+        .internship-text h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .internship-text p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .internship-btn {
+            text-align: center;
+        }
+
+        .internship-btn a {
+            background-color: #ffcc00;
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        /* Achievements Section */
+        .achievements {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .achievement-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .achievement-icon {
+            font-size: 4rem;
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+
+        .achievement-text h3 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .achievement-text p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Adding gap between buttons in header */
+        .navbar-nav .btn {
+            margin-right: 15px; /* Adjust this value to increase or decrease the gap */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar Start -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left">
+                        <div class="text">
+                            <i class="fa fa-phone-alt"></i>
+                            <p>+91 7020044091</p>
+                        </div>
+                        <div class="text">
+                            <i class="fa fa-envelope"></i>
+                            <p>info@suvidhafoundationedutech.org</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-bar-right">
+                        <div class="social">
+                            <a href="https://www.linkedin.com/company/suvidha-foundation/mycompany/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://instagram.com/suvidha_mahila_mandal?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand"><img src="image1.png" alt="Suvidha Foundation Logo"></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="internship.html" class="btn btn-warning" target="_blank">Apply For Internship</a>
+                    <a href="help.html" class="btn btn-warning">Help Now</a>
+                    <a href="events.html" class="nav-item nav-link">Events</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a href="donors.html" class="nav-item nav-link">Our Donors</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+
+    <!-- Carousel Start -->
+    <div class="carousel">
+        <div class="container-fluid">
+            <div class="owl-carousel">
+                <div class="carousel-item">
+                    <div class="carousel-img">
+                        <img src="img/Award_1.jpg" alt="Suvidha Foundation Best Women Empowerment">
+                    </div>
+                    <div class="carousel-text">
+                        <h1>Cultivating a Greener Planet with Suvidha</h1>
+                        <div class="carousel-btn">
+                            <a class="btn btn-custom" href="help.html">Donate Now</a>
+                            <a class="btn btn-custom btn-play" data-toggle="modal" data-src="img/video/Suvidha_Foundation_Video.mp4" data-target="#videoModal">Watch Video</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more carousel items as needed -->
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 about-img">
+                    <img src="https://suvidhafoundationedutech.org/img/about.jpg" class="img-fluid" alt="About Suvidha Foundation" style="border-radius: 15px;">
+                </div>
+                <div class="col-md-6">
+                    <div class="section-header">
+                        <p>Learn About Us</p>
+                        <h2>Suvidha Foundation (Suvidha Mahila Mandal)</h2>
+                    </div>
+                    <div class="about-tab">
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#tab-content-3">Achievements</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="tab-content-1" class="container tab-pane active">
+                                <p>We focus on women empowerment and sustainable development by fostering education and entrepreneurship.</p>
+                            </div>
+                            <div id="tab-content-2" class="container tab-pane fade">
+                                <p>Our mission is to create an equitable society through innovative solutions, fostering social entrepreneurship.</p>
+                            </div>
+                            <div id="tab-content-3" class="container tab-pane fade">
+                                <p>Recognized with national awards for empowering rural women and uplifting marginalized communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Internship Section -->
+    <div class="internship">
+        <div class="container">
+            <div class="section-header">
+                <h2>Apply for Internship</h2>
+                <p>Join us to make a difference while gaining real-world experience.</p>
+            </div>
+            <div class="internship-content">
+                <div class="col-md-6">
+                    <img src="image4.webp" alt="Internship at Suvidha Foundation" class="img-fluid">
+                </div>
+                <div class="col-md-6 internship-text">
+                    <h2>Internship Opportunities</h2>
+                    <p>We offer diverse opportunities in fields like education, social media management, web development, etc.</p>
+                    <div class="internship-btn">
+                        <a href="internship.html" class="btn btn-custom">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Achievements Section Start -->
+    <div class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Achievements</h2>
+                <p>Highlighting our key milestones and recognition.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h3>National Award for Women Empowerment</h3>
+                        <p>Honored for our impact on women entrepreneurs in rural areas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h3>Community Service Recognition</h3>
+                        <p>Awarded for our grassroots-level support in tribal regions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h3>Eco-Friendly Initiative Award</h3>
+                        <p>Recognized for our sustainable agriculture and green energy efforts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Achievements Section End -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                dots: true
+            });
+        });
+    </script>
+</body>
+</html>
